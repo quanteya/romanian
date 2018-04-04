@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "fiveApp/base.html" %}
+{% load my_extras %}
+
+  {%block body_block%}
+    <h1> WELCOME TO INDEX</h1>
+    <h1>
+       {{ text|cut:'world'}}
+      {{ number |add:"99" }}
+    </h1>
+      <a href="{% url 'fiveApp:relative' %}"> Relative</a>
+
+      <br />
+      <a href="{% url 'fiveApp:other' %}">Other</a>
+  {% endblock %}
